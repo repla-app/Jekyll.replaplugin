@@ -9,13 +9,12 @@ require Repla::Test::LOG_HELPER_FILE
 # Test CLI
 class TestCLI < Minitest::Test
   def setup
-    puts "Setup"
+    puts 'Setup'
   end
 
   def teardown
-    puts "Teardown"
+    puts 'Teardown'
   end
 
-  def test_cli
-  end
+  def test_cli; end
 end
