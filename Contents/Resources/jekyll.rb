@@ -13,9 +13,6 @@ dir = '/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.repla
 ENV['PATH'] = ENV['PATH'].split(':').unshift(bin_path).join(':')
 Dir.chdir(dir) do
   Kernel.exec('bundle exec jekyll serve --watch')
-  # Kernel.exec('env')
-  # Kernel.exec('which jekyll')
-  # Kernel.exec('/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bin/bundle exec jekyll serve --watch')
 end
 
 # Repla.clean_path
