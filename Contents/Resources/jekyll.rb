@@ -5,12 +5,18 @@ require_relative 'bundle/bundler/setup'
 # require 'repla'
 # require_relative 'lib/runner'
 
-ENV["PATH"] = ENV["PATH"].split(":").push("/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bin/").join(":")
+bin_path = File.expand_path(File.join(File.dirname(__FILE__), 'bin'))
 
-Dir.chdir('/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/test/data/repla-test-jekyll'){
-  # %x[/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bin/bundle exec jekyll serve --watch]
-  Kernel.exec('/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bin/bundle exec jekyll serve --watch')
-}
+# TODO: Replace with parameter
+dir = '/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/test/data/repla-test-jekyll'
+
+ENV['PATH'] = ENV['PATH'].split(':').unshift(bin_path).join(':')
+Dir.chdir(dir) do
+  Kernel.exec('bundle exec jekyll serve --watch')
+  # Kernel.exec('env')
+  # Kernel.exec('which jekyll')
+  # Kernel.exec('/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bin/bundle exec jekyll serve --watch')
+end
 
 # Repla.clean_path
 # runner = Repla::Jekyll::Runner.new(command, config)
