@@ -33,3 +33,4 @@ AllCops:
     - '**/node_modules/**/*'
     - '**/vendor/**/*'
     - '**/bundle/**/*'
+    - '**/Contents/Resources/test/data/repla-test-jekyll/**/*'
