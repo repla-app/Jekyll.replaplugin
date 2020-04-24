@@ -11,7 +11,7 @@ task default: ['jekyll:tests']
 namespace :jekyll do
   task tests: [:clean_up]
 
-  task :test_customizer do
+  task :test_cli do
     tests_file = File.join(__dir__, 'tc_cli.rb')
     ruby Shellwords.escape(tests_file)
   end
