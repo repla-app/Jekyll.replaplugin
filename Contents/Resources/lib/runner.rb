@@ -5,9 +5,11 @@ module Repla
   module Jekyll
     # Runner
     class Runner
-      def initialize(command, config = nil)
-        parent_logger = ParentLogger.new(nil, nil, config)
-        @parent = Parent.new(command, parent_logger)
+      def initialize(command, path, config = nil)
+        window = Repla::Window.new
+        window.root_access_directory_path = path
+        parent_logger = ParentLogger.new(nil, view, config)
+        @parent = Parent.new(command, path, parent_logger)
       end
 
       def run
