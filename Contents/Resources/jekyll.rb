@@ -4,17 +4,14 @@ require_relative 'bundle/bundler/setup'
 require_relative 'lib/runner'
 require_relative 'lib/config'
 
-bin_path = File.expand_path(File.join(File.dirname(__FILE__), 'bin'))
-
-# TODO: Replace with parameter
-
 path = if ARGV.empty?
          Dir.pwd
        else
-         File.expand_path(File.dirname(file))
+         File.expand_path(File.dirname(ARGF.file))
        end
 
 config = { refresh_string: '...done' }
+bin_path = File.expand_path(File.join(File.dirname(__FILE__), 'bin'))
 ENV['PATH'] = ENV['PATH'].split(':').unshift(bin_path).join(':')
 command = 'bundle exec jekyll serve --watch'
 
