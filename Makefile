@@ -18,3 +18,9 @@ bundle_update:
 		bundle update &&\
 		bundle clean &&\
 		bundle install --standalone --binstubs
+
+install_gems:
+	cd ./Contents/Resources/ &&\
+		GEM_HOME=gems gem install jekyll -v 3.8.5 &&\
+		GEM_HOME=gems gem install bundler -v 2.0.2 &&\
+		GEM_HOME=gems gem install minima

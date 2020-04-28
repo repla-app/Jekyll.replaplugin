@@ -3,9 +3,10 @@ module Repla
   module Jekyll
     # Parent
     class Parent
-      def initialize(command, delegate)
+      def initialize(command, path, delegate)
         @delegate = delegate
         @command = command
+        @path = path
       end
 
       def run
@@ -19,7 +20,7 @@ module Repla
         # have to handle escape codes, but this seems to automatically prevent
         # any `STDOUT` buffering issues
         require 'pty'
-        PTY.spawn(@command) do |stdout, stdin, pid|
+        PTY.spawn(@command, chdir: @path) do |stdout, stdin, pid|
           stdin.sync = true
           stdout.sync = true
 

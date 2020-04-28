@@ -1,7 +1,6 @@
 require_relative '../bundle/bundler/setup'
 require 'repla'
 require_relative 'putter'
-require_relative 'watcher'
 
 # Repla
 module Repla
@@ -27,14 +26,7 @@ module Repla
 
       def loaded_url=(value)
         @loaded_url = value
-        return unless @config&.file_refresh && !watching
-
-        @watcher = Watcher.new(self)
-        @watcher.start
-      end
-
-      def watching
-        !@watcher.nil?
+        return unless @config&.file_refresh
       end
 
       def file
