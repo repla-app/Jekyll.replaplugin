@@ -1,14 +1,22 @@
 require_relative 'parent'
 require_relative 'parent_logger'
+require_relative 'config.rb'
 
 module Repla
   module Jekyll
     # Runner
     class Runner
-      def initialize(command, path, config = nil)
+      def initialize(path)
+        options = { refresh_string: '...done' }
+        config = Repla::Jekyll::Config.new(options)
+        bin_path = File.expand_path(File.join(File.dirname(__FILE__), '../bin'))
+        ENV['PATH'] = ENV['PATH'].split(':').unshift(bin_path).join(':')
+        command = 'bundle exec jekyll serve --watch'
+
         window = Repla::Window.new
         window.root_access_directory_path = path
-        parent_logger = ParentLogger.new(nil, view, config)
+        logger = Repla::Jekyll::Putter.new
+        parent_logger = ParentLogger.new(logger, window, config)
         @parent = Parent.new(command, path, parent_logger)
       end
 
