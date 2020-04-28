@@ -9,8 +9,9 @@ module Repla
       def initialize(path)
         options = { refresh_string: '...done' }
         config = Repla::Jekyll::Config.new(options)
-        bin_path = File.expand_path(File.join(File.dirname(__FILE__), '../bin'))
+        bin_path = File.expand_path(File.join(__dir__, '../gems/bin'))
         ENV['PATH'] = ENV['PATH'].split(':').unshift(bin_path).join(':')
+        ENV['GEM_PATH'] = File.expand_path(File.join(__dir__, '../gems'))
         command = 'bundle exec jekyll serve --watch'
 
         window = Repla::Window.new
