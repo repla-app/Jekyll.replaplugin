@@ -12,6 +12,7 @@ module Repla
         bin_path = File.expand_path(File.join(__dir__, '../gems/bin'))
         ENV['PATH'] = ENV['PATH'].split(':').unshift(bin_path).join(':')
         ENV['GEM_PATH'] = File.expand_path(File.join(__dir__, '../gems'))
+        ENV['HOME'] = path
         command = 'bundle exec jekyll serve --watch'
 
         window = Repla::Window.new
