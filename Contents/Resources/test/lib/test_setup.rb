@@ -3,3 +3,4 @@ require 'repla/test'
 
 TEST_DATA_DIR = File.join(__dir__, '../data/')
 TEST_BLOG_DIR = File.join(TEST_DATA_DIR, 'repla-test-jekyll')
+TEST_TITLE_PREFIX = 'Your awesome title'.freeze

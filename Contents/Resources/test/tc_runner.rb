@@ -11,7 +11,9 @@ require_relative '../lib/runner.rb'
 class TestCLI < Minitest::Test
   def setup
     @runner = Repla::Jekyll::Runner.new(TEST_BLOG_DIR)
-    @runner.run
+    Thread.new do
+      @runner.run
+    end
 
     window_id = nil
     Repla::Test.block_until do
@@ -24,14 +26,16 @@ class TestCLI < Minitest::Test
 
   def teardown
     @runner.stop
+    @window.close
   end
 
   def test_runner
+    javascript = File.read(Repla::Test::TITLE_JAVASCRIPT_FILE)
     result = nil
     Repla::Test.block_until do
       result = @window.do_javascript(javascript)
-      result == Repla::Test::INDEX_HTML_TITLE
+      result.start_with?(TEST_TITLE_PREFIX)
     end
-    assert_equal(Repla::Test::INDEX_HTML_TITLE, result)
+    assert(result.start_with?(TEST_TITLE_PREFIX))
   end
 end
