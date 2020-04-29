@@ -1,5 +1,5 @@
 current directory: /Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c
-/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -I /Users/robenkleene/.rubies/ruby-2.4.1/lib/ruby/site_ruby/2.4.0 -r ./siteconf20200428-2582-1p6srpo.rb extconf.rb
+/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -I /Users/robenkleene/.rubies/ruby-2.4.1/lib/ruby/site_ruby/2.4.0 -r ./siteconf20200429-43080-ltnuit.rb extconf.rb
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi... no
 checking for shlwapi.h... no
@@ -20,11 +20,11 @@ clang: error: no input files
 cd "/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi-x86_64-darwin18" && /Applications/Xcode.app/Contents/Developer/usr/bin/make
 /Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
 Making all in include
-make[3]: Nothing to be done for `all'.
+make[4]: Nothing to be done for `all'.
 Making all in testsuite
-make[3]: Nothing to be done for `all'.
+make[4]: Nothing to be done for `all'.
 Making all in man
-make[3]: Nothing to be done for `all'.
+make[4]: Nothing to be done for `all'.
 /bin/sh ./libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi  -I. -I/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi/include -Iinclude -I/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi/src   -Wall -fexceptions -c -o src/prep_cif.lo /Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi/src/prep_cif.c
 libtool: compile:  clang -DHAVE_CONFIG_H -I. -I/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi -I. -I/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi/include -Iinclude -I/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi/src -Wall -fexceptions -c /Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi/src/prep_cif.c  -fno-common -DPIC -o src/.libs/prep_cif.o
 /bin/sh ./libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi  -I. -I/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi/include -Iinclude -I/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi/src   -Wall -fexceptions -c -o src/types.lo /Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi/src/types.c
@@ -101,12 +101,12 @@ make "DESTDIR=" install
 cd "/Users/robenkleene/Development/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/gems/gems/ffi-1.12.2/ext/ffi_c/libffi-x86_64-darwin18" && /Applications/Xcode.app/Contents/Developer/usr/bin/make
 /Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
 Making all in include
-make[3]: Nothing to be done for `all'.
+make[4]: Nothing to be done for `all'.
 Making all in testsuite
-make[3]: Nothing to be done for `all'.
+make[4]: Nothing to be done for `all'.
 Making all in man
-make[3]: Nothing to be done for `all'.
-make[3]: Nothing to be done for `all-am'.
+make[4]: Nothing to be done for `all'.
+make[4]: Nothing to be done for `all-am'.
 compiling AbstractMemory.c
 compiling ArrayType.c
 compiling Buffer.c
@@ -138,4 +138,4 @@ compiling Types.c
 compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.bundle
-/usr/local/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20200428-2582-1ylfdah
+/usr/local/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20200429-43080-14mvh7z
