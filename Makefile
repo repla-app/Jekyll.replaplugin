@@ -21,6 +21,6 @@ bundle_update:
 
 install_gems:
 	cd ./Contents/Resources/ &&\
-		GEM_HOME=gems gem install jekyll -v 3.8.5 &&\
-		GEM_HOME=gems gem install bundler -v 2.0.2 &&\
-		GEM_HOME=gems gem install minima
+		GEM_HOME=gems gem install --no-document jekyll -v 3.8.5 &&\
+		GEM_HOME=gems gem install --no-document bundler -v 2.0.2 &&\
+		GEM_HOME=gems gem install --no-document minima
