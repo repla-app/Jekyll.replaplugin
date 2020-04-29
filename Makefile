@@ -24,3 +24,4 @@ install_gems:
 		GEM_HOME=gems gem install --no-document jekyll -v 3.8.5 &&\
 		GEM_HOME=gems gem install --no-document bundler -v 2.0.2 &&\
 		GEM_HOME=gems gem install --no-document minima
+		GEM_HOME=gems gem install --no-document unicode-display_width
