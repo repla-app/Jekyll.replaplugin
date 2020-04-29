@@ -34,3 +34,4 @@ AllCops:
     - '**/vendor/**/*'
     - '**/bundle/**/*'
     - '**/Contents/Resources/test/data/repla-test-jekyll/**/*'
+    - '**/Contents/Resources/gems/**/*'
