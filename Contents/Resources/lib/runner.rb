@@ -9,13 +9,14 @@ module Repla
       def initialize(path)
         options = { refresh_string: '...done' }
         config = Repla::Jekyll::Config.new(options)
-        bin_path = File.expand_path(File.join(__dir__, '../gems/bin'))
+        bin_path = File.expand_path(File.join(__dir__, '../bin'))
         # Some Jekyll themes need to run `git` in there `gemspec`
         system_bin_path = '/usr/bin'
         ENV['PATH'] = ENV['PATH'].split(':').unshift(
+          system_bin_path
+        ).unshift(
           bin_path
-        ).unshift(system_bin_path).join(':')
-        ENV['GEM_PATH'] = File.expand_path(File.join(__dir__, '../gems'))
+        ).join(':')
         ENV['HOME'] = path
         command = 'bundle exec jekyll serve --watch'
 
