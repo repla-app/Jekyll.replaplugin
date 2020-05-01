@@ -19,7 +19,10 @@ module Repla
         ).push(
           system_bin_path
         ).join(':')
-        command = 'jekyll serve --watch'
+        # command = 'jekyll serve --watch'
+        # `JEKYLL_NO_BUNDLER_REQUIRE=true` is needed, otherwise `jekyll`
+        # requires the Bundler gem to be preset.
+        command = 'JEKYLL_NO_BUNDLER_REQUIRE=true jekyll serve --watch'
 
         window = Repla::Window.new
         window.root_access_directory_path = path
