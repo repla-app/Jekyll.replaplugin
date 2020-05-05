@@ -19,7 +19,9 @@ module Repla
         ).push(
           system_bin_path
         ).join(':')
-        # command = 'jekyll serve --watch'
+        ENV['GEM_PATH'] = File.expand_path(
+          File.join(__dir__, '../bundle/ruby/2.4.0/')
+        )
         # `JEKYLL_NO_BUNDLER_REQUIRE=true` is needed, otherwise `jekyll`
         # requires the Bundler gem to be preset.
         command = 'JEKYLL_NO_BUNDLER_REQUIRE=true jekyll serve --watch'
