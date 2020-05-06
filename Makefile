@@ -22,12 +22,8 @@ bundle_update:
 patch: patch_binaries sign_binaries
 
 sign_binaries:
-	codesign --force --options runtime --sign "Developer ID Application" \
-		Contents/Resources/bundle/ruby/2.4.0/gems/ffi-1.12.2/lib/ffi_c.bundle
-	codesign --force --options runtime --sign "Developer ID Application" \
-		Contents/Resources/bundle/ruby/2.4.0/gems/sassc-2.3.0/lib/sassc/libsass.bundle
-	codesign --force --options runtime --sign "Developer ID Application" \
-		Contents/Resources/binary/libgmp.10.dylib
+	find ./Contents/Resources/bundle/ruby/2.4.0/ -name '*.bundle' -print0 \
+		| xargs -0 codesign --force --options runtime --sign "Developer ID Application"
 
 patch_binaries:
 	install_name_tool -change \
