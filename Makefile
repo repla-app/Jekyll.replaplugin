@@ -25,7 +25,9 @@ sign_binaries:
 	codesign --force --options runtime --sign "Developer ID Application" \
 		Contents/Resources/bundle/ruby/2.4.0/gems/ffi-1.12.2/lib/ffi_c.bundle
 	codesign --force --options runtime --sign "Developer ID Application" \
-		Contents/Resources/bundle/ruby/2.4.0/gems/sassc-2.3.0/ext/libsass.bundle
+		Contents/Resources/bundle/ruby/2.4.0/gems/sassc-2.3.0/lib/sassc/libsass.bundle
+	codesign --force --options runtime --sign "Developer ID Application" \
+		Contents/Resources/binary/libgmp.10.dylib
 
 patch_binaries:
 	install_name_tool -change \
