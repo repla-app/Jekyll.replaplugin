@@ -19,6 +19,8 @@ bundle_update:
 		bundle clean &&\
 		bundle install --standalone --binstubs
 
+patch: patch_binaries sign_binaries
+
 sign_binaries:
 	codesign --force --options runtime --sign "Developer ID Application" \
 		Contents/Resources/bundle/ruby/2.4.0/gems/ffi-1.12.2/lib/ffi_c.bundle
