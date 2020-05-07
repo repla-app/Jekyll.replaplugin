@@ -40,4 +40,11 @@ patch_binaries:
 		| xargs -0 -n 1 install_name_tool -change \
 		/usr/local/opt/openssl/lib/libssl.1.0.0.dylib \
 		@loader_path/../../../../../../binary/libssl.1.0.0.dylib
-
+	find ./Contents/Resources/bundle/ruby/2.4.0/ -name '*.bundle' -print0 \
+		| xargs -0 -n 1 install_name_tool -change \
+		/usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib \
+		@loader_path/../../../../../../binary/libcrypto.1.0.0.dylib
+	find ./Contents/Resources/binary -name '*.dylib' -print0 \
+		| xargs -0 -n 1 install_name_tool -change \
+		'@@HOMEBREW_CELLAR@@/openssl/1.0.2p/lib/libcrypto.1.0.0.dylib' \
+		@loader_path/libcrypto.1.0.0.dylib
