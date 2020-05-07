@@ -54,4 +54,6 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/jekyll-theme-slate-0.
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/jekyll-theme-tactile-0.1.1/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/jekyll-theme-time-machine-0.1.1/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/minima-2.5.1/lib"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/extensions/x86_64-darwin-18/2.4.0-static/openssl-2.1.2"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/openssl-2.1.2/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/repla-0.10.4/lib"
