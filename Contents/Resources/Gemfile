@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.1'
 gem 'jekyll'
+gem 'jekyll-remote-theme'
 gem 'jekyll-theme-architect'
 gem 'jekyll-theme-cayman'
 gem 'jekyll-theme-dinky'
