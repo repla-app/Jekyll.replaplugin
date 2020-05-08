@@ -9,15 +9,25 @@ module Repla
       def initialize(path)
         options = { refresh_string: '...done' }
         config = Repla::Jekyll::Config.new(options)
-        bin_path = File.expand_path(File.join(__dir__, '../gems/bin'))
+        bin_path = File.expand_path(
+          File.join(__dir__, '../bin')
+        )
         # Some Jekyll themes need to run `git` in there `gemspec`
         system_bin_path = '/usr/bin'
-        ENV['PATH'] = ENV['PATH'].split(':').unshift(
+        ENV['PATH'] = ENV['PATH'].split(':').push(
           bin_path
-        ).unshift(system_bin_path).join(':')
-        ENV['GEM_PATH'] = File.expand_path(File.join(__dir__, '../gems'))
-        ENV['HOME'] = path
-        command = 'bundle exec jekyll serve --watch'
+        ).push(
+          system_bin_path
+        ).join(':')
+        gem_path = File.expand_path(
+          File.join(__dir__, '../bundle/ruby/2.4.0/')
+        )
+        ENV['GEM_PATH'] = gem_path
+        # Hack to allow process to have gems
+        ENV['ENCLOSE_IO_RUBYC_1ST_PASS'] = 'true'
+        # `JEKYLL_NO_BUNDLER_REQUIRE=true` is needed, otherwise `jekyll`
+        # requires the Bundler gem to be preset.
+        command = 'JEKYLL_NO_BUNDLER_REQUIRE=true jekyll serve --watch --trace'
 
         window = Repla::Window.new
         window.root_access_directory_path = path

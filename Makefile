@@ -19,13 +19,32 @@ bundle_update:
 		bundle clean &&\
 		bundle install --standalone --binstubs
 
-# The following files at `/gems/specifications/` we're replace by fake shims:
-# `rubocop-0.50.0.gemspec`
-# `w3c_validators-1.3.0.gemspec`
-# `html-proofer-3.0.0.gemspec`
-install_gems:
-	cd ./Contents/Resources/ &&\
-		GEM_HOME=gems gem install --no-document jekyll -v 3.8.5 &&\
-		GEM_HOME=gems gem install --no-document bundler -v 2.0.2 &&\
-		GEM_HOME=gems gem install --no-document minima
-		GEM_HOME=gems gem install --no-document unicode-display_width
+patch: patch_binaries sign_binaries
+
+sign_binaries:
+	find ./Contents/Resources/bundle/ruby/2.4.0/ -name '*.bundle' -print0 \
+		| xargs -0 codesign --force --options runtime --sign "Developer ID Application"
+	find ./Contents/Resources/binary -name '*.dylib' -print0 \
+		| xargs -0 codesign --force --options runtime --sign "Developer ID Application"
+
+patch_binaries:
+	find ./Contents/Resources/bundle/ruby/2.4.0/ -name '*.bundle' -print0 \
+		| xargs -0 -n 1 install_name_tool -change \
+		/usr/local/opt/gmp/lib/libgmp.10.dylib \
+		@loader_path/../../../../../../binary/libgmp.10.dylib
+	find ./Contents/Resources/bundle/ruby/2.4.0/ -name '*.bundle' -print0 \
+		| xargs -0 -n 1 install_name_tool -change \
+		/usr/local/Cellar/gmp/6.2.0/lib/libgmp.10.dylib \
+		@loader_path/../../../../../../binary/libgmp.10.dylib
+	find ./Contents/Resources/bundle/ruby/2.4.0/ -name '*.bundle' -print0 \
+		| xargs -0 -n 1 install_name_tool -change \
+		/usr/local/opt/openssl/lib/libssl.1.0.0.dylib \
+		@loader_path/../../../../../../binary/libssl.1.0.0.dylib
+	find ./Contents/Resources/bundle/ruby/2.4.0/ -name '*.bundle' -print0 \
+		| xargs -0 -n 1 install_name_tool -change \
+		/usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib \
+		@loader_path/../../../../../../binary/libcrypto.1.0.0.dylib
+	find ./Contents/Resources/binary -name '*.dylib' -print0 \
+		| xargs -0 -n 1 install_name_tool -change \
+		'@@HOMEBREW_CELLAR@@/openssl/1.0.2p/lib/libcrypto.1.0.0.dylib' \
+		@loader_path/libcrypto.1.0.0.dylib
