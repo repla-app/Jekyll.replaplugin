@@ -19,7 +19,10 @@ bundle_update:
 		bundle clean &&\
 		bundle install --standalone --binstubs
 
-patch: patch_binaries sign_binaries
+patch: recompile_fsevents patch_binaries sign_binaries
+
+recompile_fsevents:
+	cd Contents/Resources/bundle/ruby/2.4.0/gems/rb-fsevent-0.10.4/ext/ && rake
 
 sign_binaries:
 	find ./Contents/Resources/bundle/ruby/2.4.0/ -name '*.bundle' -print0 \
