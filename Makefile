@@ -29,6 +29,8 @@ sign_binaries:
 		| xargs -0 codesign --force --options runtime --sign "Developer ID Application"
 	find ./Contents/Resources/binary -name '*.dylib' -print0 \
 		| xargs -0 codesign --force --options runtime --sign "Developer ID Application"
+	codesign --force --options runtime --sign "Developer ID Application" \
+		Contents/Resources/bundle/ruby/2.4.0/gems/rb-fsevent-0.10.4/bin/fsevent_watch
 
 patch_binaries:
 	find ./Contents/Resources/bundle/ruby/2.4.0/ -name '*.bundle' -print0 \
