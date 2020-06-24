@@ -34,7 +34,7 @@ class TestCLI < Minitest::Test
     result = nil
     Repla::Test.block_until do
       result = @window.do_javascript(javascript)
-      result.start_with?(TEST_TITLE_PREFIX)
+      result && result.start_with?(TEST_TITLE_PREFIX)
     end
     assert(result.start_with?(TEST_TITLE_PREFIX))
   end
