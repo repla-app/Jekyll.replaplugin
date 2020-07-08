@@ -53,3 +53,6 @@ patch_binaries:
 		| xargs -0 -n 1 install_name_tool -change \
 		'@@HOMEBREW_CELLAR@@/openssl/1.0.2p/lib/libcrypto.1.0.0.dylib' \
 		@loader_path/libcrypto.1.0.0.dylib
+
+loc:
+	cloc --vcs=git --exclude-dir=.bundle
