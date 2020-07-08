@@ -55,4 +55,4 @@ patch_binaries:
 		@loader_path/libcrypto.1.0.0.dylib
 
 loc:
-	cloc --vcs=git --exclude-dir=.bundle
+	cloc --vcs=git --exclude-dir=bundle,.bundle
