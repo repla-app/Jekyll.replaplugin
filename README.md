@@ -1,1 +1,1 @@
-# Jekyll [![Build Status](https://travis-ci.org/repla-app/Jekyll.replaplugin.svg?branch=master)](https://travis-ci.org/repla-app/Jekyll.replaplugin)
+# Jekyll ![Status](https://github.com/repla-app/Jekyll.replaplugin/actions/workflows/ci.yml/badge.svg)
