@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby --disable-gems
+#!/usr/bin/awk BEGIN{a=ARGV[1];sub(/[a-z_.]+$/,"binary/ruby",a);system(a"\t"ARGV[1])}
 
 require_relative 'bundle/bundler/setup'
 require_relative 'lib/runner'
