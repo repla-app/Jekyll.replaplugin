@@ -3,9 +3,7 @@ module Repla
     # Logger to standard out
     class Putter
       def info(text)
-        if text !~ /^Ignoring\s[^\s]+\sbecause its extensions are not built\./
-          puts text
-        end
+        puts text
         STDOUT.flush
       end
 
