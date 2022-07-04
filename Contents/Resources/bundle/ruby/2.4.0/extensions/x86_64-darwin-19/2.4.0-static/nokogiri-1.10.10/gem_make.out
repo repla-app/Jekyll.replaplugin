@@ -1,5 +1,5 @@
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/nokogiri-1.10.10/ext/nokogiri
-/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220704-86756-17g0z8a.rb extconf.rb
+/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220619-49577-hb3sg6.rb extconf.rb
 checking if the C compiler accepts  -I /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libxml2... yes
 checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
 Building nokogiri using packaged libraries.
@@ -152,4 +152,4 @@ rm -rf /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replapl
 
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/nokogiri-1.10.10/ext/nokogiri
 make "DESTDIR=" install
-/usr/local/bin/ginstall -c -m 0755 nokogiri.bundle ./.gem.20220704-86756-1oqvok6/nokogiri
+/usr/local/bin/ginstall -c -m 0755 nokogiri.bundle ./.gem.20220619-49577-12xevpk/nokogiri
