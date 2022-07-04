@@ -11,4 +11,4 @@ path = Pathname.new(__FILE__)
 $:.unshift File.expand_path "../../bundle", path.realpath
 
 require "bundler/setup"
-load File.expand_path "../../bundle/ruby/2.4.0/gems/rouge-3.26.0/bin/rougify", path.realpath
+load File.expand_path "../../bundle/ruby/2.4.0/gems/rouge-3.18.0/bin/rougify", path.realpath
