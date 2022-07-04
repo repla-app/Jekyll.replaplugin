@@ -1,5 +1,5 @@
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/unf_ext-0.0.8.2/ext/unf_ext
-/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220704-71227-jcuyt9.rb extconf.rb
+/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220704-86756-1akg377.rb extconf.rb
 checking for -lstdc++... yes
 creating Makefile
 
@@ -35,4 +35,4 @@ linking shared-object unf_ext.bundle
 
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/unf_ext-0.0.8.2/ext/unf_ext
 make "DESTDIR=" install
-/usr/local/bin/ginstall -c -m 0755 unf_ext.bundle ./.gem.20220704-71227-x02efa
+/usr/local/bin/ginstall -c -m 0755 unf_ext.bundle ./.gem.20220704-86756-1vn5a5i

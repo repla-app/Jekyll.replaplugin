@@ -1,5 +1,5 @@
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/openssl-2.2.1/ext/openssl
-/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220704-71227-1e4p6qz.rb extconf.rb
+/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220704-86756-1maivs2.rb extconf.rb
 checking for t_open() in -lnsl... no
 checking for socket() in -lsocket... no
 checking for openssl/ssl.h... yes
@@ -116,4 +116,4 @@ linking shared-object openssl.bundle
 
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/openssl-2.2.1/ext/openssl
 make "DESTDIR=" install
-/usr/local/bin/ginstall -c -m 0755 openssl.bundle ./.gem.20220704-71227-bwxh7x
+/usr/local/bin/ginstall -c -m 0755 openssl.bundle ./.gem.20220704-86756-p5oyt2

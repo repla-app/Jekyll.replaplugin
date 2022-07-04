@@ -1,5 +1,5 @@
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/eventmachine-1.2.7/ext/fastfilereader
-/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220704-71227-19dhk7i.rb extconf.rb
+/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220704-86756-ntleli.rb extconf.rb
 creating Makefile
 
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/eventmachine-1.2.7/ext/fastfilereader
@@ -13,4 +13,4 @@ linking shared-object fastfilereaderext.bundle
 
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/eventmachine-1.2.7/ext/fastfilereader
 make "DESTDIR=" install
-/usr/local/bin/ginstall -c -m 0755 fastfilereaderext.bundle ./.gem.20220704-71227-7nnec8
+/usr/local/bin/ginstall -c -m 0755 fastfilereaderext.bundle ./.gem.20220704-86756-8rqfrg

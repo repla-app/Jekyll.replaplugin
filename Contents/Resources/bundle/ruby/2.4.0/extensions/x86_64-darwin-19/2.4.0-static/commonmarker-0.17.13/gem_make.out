@@ -1,5 +1,5 @@
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/commonmarker-0.17.13/ext/commonmarker
-/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220704-84695-1mrynnf.rb extconf.rb
+/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220704-86756-xrsohp.rb extconf.rb
 creating Makefile
 
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/commonmarker-0.17.13/ext/commonmarker
@@ -118,4 +118,4 @@ linking shared-object commonmarker/commonmarker.bundle
 
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/commonmarker-0.17.13/ext/commonmarker
 make "DESTDIR=" install
-/usr/local/bin/ginstall -c -m 0755 commonmarker.bundle ./.gem.20220704-84695-1jo6i1u/commonmarker
+/usr/local/bin/ginstall -c -m 0755 commonmarker.bundle ./.gem.20220704-86756-13aqktf/commonmarker
