@@ -25,11 +25,10 @@ bundle_update:
 		bundle clean &&\
 		bundle install --standalone --binstubs
 
-# patch: recompile_fsevents patch_binaries sign_binaries
-patch: patch_binaries sign_binaries
+patch: recompile_fsevents patch_binaries sign_binaries
 
-# recompile_fsevents:
-# 	cd Contents/Resources/bundle/ruby/2.4.0/gems/rb-fsevent-0.11.1/ext/ && rake
+recompile_fsevents:
+	cd Contents/Resources/bundle/ruby/2.4.0/gems/rb-fsevent-0.10.4/ext/ && rake
 
 sign_binaries:
 	find ./Contents/Resources/bundle/ruby/2.4.0/ -name '*.bundle' -print0 \
@@ -37,7 +36,7 @@ sign_binaries:
 	find ./Contents/Resources/binary -name '*.dylib' -print0 \
 		| xargs -0 codesign --force --options runtime --sign "Developer ID Application"
 	codesign --force --options runtime --sign "Developer ID Application" \
-		Contents/Resources/bundle/ruby/2.4.0/gems/rb-fsevent-0.11.1/bin/fsevent_watch
+		Contents/Resources/bundle/ruby/2.4.0/gems/rb-fsevent-0.10.4/bin/fsevent_watch
 
 patch_binaries:
 	find ./Contents/Resources/bundle/ruby/2.4.0/ -name '*.bundle' -print0 \

@@ -1,6 +1,5 @@
 require 'rbconfig'
-# ruby 1.8.7 doesn't define RUBY_ENGINE
-ruby_engine = defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'ruby'
+ruby_engine = RUBY_ENGINE
 ruby_version = RbConfig::CONFIG["ruby_version"]
 path = File.expand_path('..', __FILE__)
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby"
@@ -50,7 +49,7 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/faraday-1.10.0/spec/e
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/forwardable-extended-2.6.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/gemoji-3.0.1/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sawyer-0.9.2/lib"
-$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/octokit-4.25.0/lib"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/octokit-4.25.1/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/typhoeus-1.4.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/github-pages-health-check-1.17.9/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rb-fsevent-0.11.1/lib"

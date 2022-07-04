@@ -1,5 +1,5 @@
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220619-49577-129ktt7.rb extconf.rb
+/Users/robenkleene/.rubies/ruby-2.4.1/bin/ruby -r ./siteconf20220704-86756-a0i55w.rb extconf.rb
 creating Makefile
 
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
@@ -17,4 +17,4 @@ linking shared-object ruby_http_parser.bundle
 
 current directory: /Users/robenkleene/Developer/Projects/Cocoa/Repla/Packages/Jekyll.replaplugin/Contents/Resources/bundle/ruby/2.4.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
 make "DESTDIR=" install
-/usr/local/bin/ginstall -c -m 0755 ruby_http_parser.bundle ./.gem.20220619-49577-1pd1vip
+/usr/local/bin/ginstall -c -m 0755 ruby_http_parser.bundle ./.gem.20220704-86756-78a8ge
